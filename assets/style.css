@@ -1,3 +1,29 @@
+/* Self-hosted fonts (SIL OFL 1.1, see assets/fonts/OFL-*.txt) */
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/Pretendard-Regular.subset.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-display: swap;
+  src: url(/assets/fonts/Pretendard-SemiBold.subset.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-display: swap;
+  src: url(/assets/fonts/Pretendard-Bold.subset.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Sora';
+  font-weight: 600;
+  font-display: swap;
+  src: url(/assets/fonts/Sora-SemiBold.latin.woff2) format('woff2');
+}
+
 :root {
   --ink: #1B1F33;
   --warm: #FF2E63;
@@ -21,6 +47,11 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+:lang(ja) body,
+body:lang(ja) {
+  font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', Meiryo, sans-serif;
 }
 
 a { color: inherit; }
@@ -135,6 +166,25 @@ main { flex: 1; }
 }
 .doc th { background: var(--bg); }
 .table-scroll { overflow-x: auto; }
+.doc .note {
+  font-size: 14px;
+  color: var(--muted);
+  background: var(--bg);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 0 0 28px;
+}
+.lang-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  justify-content: flex-end;
+  font-size: 14px;
+  margin: 0 0 16px;
+}
+.lang-switch a { color: var(--muted); text-decoration: none; }
+.lang-switch a:hover { color: var(--ink); text-decoration: underline; }
+.lang-switch a[aria-current="page"] { color: var(--ink); font-weight: 600; }
 
 /* Footer */
 .site-footer {
