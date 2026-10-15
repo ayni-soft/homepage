@@ -56,6 +56,8 @@
           <tr><td>アプリのフォント</td><td>IPアドレスなどの一般的な接続情報</td><td>フォントを初めてダウンロードするときに Google のサーバーへ自動で送信</td></tr>
           <tr><td>アプリの天気情報（Momento）</td><td>端末の位置座標、位置を取得できない場合は IPアドレス</td><td>天気表示をオンにしたとき、天気と地域名を取得するため天気・地図サービスへ自動で送信</td></tr>
           <tr><td>アプリ内購入（Momento）</td><td>購入履歴（商品、購入日時、購入確認情報）</td><td>プレミアム購入時に Google Play の決済で処理（当社は支払い方法の情報を受け取りません）</td></tr>
+          <tr><td>アプリの利用統計・エラー（WORLD RADIO、Android）</td><td>アプリインスタンスID、利用イベント（選んだ国・言語、再生またはお気に入りに追加した放送局の名前と国コード）、端末モデル・OSバージョン、アプリのバージョン、エラーの発生日時と内容、おおよその位置情報</td><td>アプリの利用時に Google Firebase Analytics・Crashlytics が自動で収集</td></tr>
+          <tr><td>アプリのコンテンツ取得（WORLD RADIO）</td><td>IPアドレスなどの一般的な接続情報、検索語（ポッドキャスト検索時）</td><td>放送局リスト・ロゴの取得、放送局・ポッドキャストの再生・検索時に該当するサーバーへ自動で送信</td></tr>
         </tbody>
       </table>
       </div>
@@ -80,6 +82,17 @@
         <li><strong>広告（Google AdMob）：</strong>無料で利用する場合は Google AdMob の広告を表示し、その取り扱いは上記の応援LEDの広告の項目と同じです。プレミアムを購入すると広告は表示されません。</li>
       </ol>
 
+      <h3>WORLD RADIO</h3>
+      <ol>
+        <li><strong>端末内にのみ保存する情報：</strong>お気に入りの放送局とその順序、最近再生した放送局、登録したポッドキャスト、続きから再生する位置と再生速度、最後に選んだ国・言語、アプリの表示言語は利用者の端末内にのみ保存され、当社に送信されることはありません。アプリを削除するかアプリのデータを消去すると一緒に削除されます。</li>
+        <li><strong>放送局リストとロゴ：</strong>アプリの設定、放送局リスト、放送局のロゴは、当社が Google Firebase Hosting に置いたファイルから取得します。その際、IPアドレスなどの一般的な接続情報が Google のサーバーに送信される場合があります。</li>
+        <li><strong>放送とポッドキャストの再生：</strong>アプリは放送を自ら配信せず、利用者が選んだ放送局・ポッドキャスト配信者のサーバーに直接接続して再生します。その際、各サーバーに IPアドレスやリクエストの記録が残る場合があり、各放送局・配信者のポリシーに従って取り扱われます。</li>
+        <li><strong>ポッドキャスト検索：</strong>ポッドキャストのランキングと検索には Apple の iTunes Search API を使用し、入力した検索語と IPアドレスなどが Apple に送信されます。</li>
+        <li><strong>ロゴ画像の変換：</strong>一部の放送局のロゴは画像変換サービス wsrv.nl を経由して取得します。その際、IPアドレスなどの接続情報が wsrv.nl に送信される場合があります。</li>
+        <li><strong>利用統計とエラー診断（Android）：</strong>サービスの改善と安定性のため Google Firebase Analytics と Crashlytics を使用します。Analytics に送るイベントは、国の選択、言語の選択、放送局の再生、お気に入りへの追加の4種類のみで、放送局名や国コードなどのコンテンツ情報を含み、利用者を直接識別する情報は含みません。</li>
+        <li><strong>広告（Google AdMob）：</strong>無料で提供され、Google AdMob の広告を表示します。その取り扱いは上記の応援LEDの広告の項目と同じです。欧州経済領域（EEA）・英国・スイスの利用者には初回起動時に Google の同意画面（User Messaging Platform）を表示し、同意を得るまで広告をリクエストしません。選択内容はアプリの設定からいつでも変更できます。</li>
+      </ol>
+
       <h2>第4条（パーソナライズ広告の拒否方法）</h2>
       <p>利用者は、端末の設定でパーソナライズ広告をオフにしたり、広告識別子をリセット・削除したりできます。</p>
       <ul>
@@ -98,7 +111,7 @@
       </ul>
 
       <h2>第6条（個人情報の第三者提供）</h2>
-      <p>当社は、利用者の個人情報を第1条に定める範囲内でのみ処理し、利用者の同意がある場合または法律に特別の定めがある場合など「個人情報保護法」第17条および第18条に該当する場合にのみ、第三者に提供します。ただし、第7条に記載するとおり、アプリの広告・フォント・アプリ内購入の提供のため Google LLC が、Momento の天気表示のためノルウェー気象研究所（MET Norway）、OpenStreetMap Foundation、ipapi.co（Kloudend, Inc.）が情報を受け取ります。</p>
+      <p>当社は、利用者の個人情報を第1条に定める範囲内でのみ処理し、利用者の同意がある場合または法律に特別の定めがある場合など「個人情報保護法」第17条および第18条に該当する場合にのみ、第三者に提供します。ただし、第7条に記載するとおり、アプリの広告・フォント・アプリ内購入の提供のため Google LLC が、Momento の天気表示のためノルウェー気象研究所（MET Norway）、OpenStreetMap Foundation、ipapi.co（Kloudend, Inc.）が、WORLD RADIO の利用統計・エラー診断とコンテンツ提供のため Google LLC（Firebase）、Apple Inc.、wsrv.nl が情報を受け取ります。</p>
 
       <h2>第7条（個人情報の国外移転）</h2>
       <p>当社は、サービスの提供のため、次のとおり個人情報を国外に移転します。国外移転を望まない場合は、該当するサービス（アプリ、ウェブサイト）の利用を中止するか、第4条の方法でパーソナライズ広告を拒否できます。</p>
@@ -153,6 +166,30 @@
             <td>おおよその位置の確認（Momento、端末の位置を取得できない場合のみ）</td>
             <td>天気を取得するときにネットワークを通じて送信</td>
             <td>ipapi.co のプライバシーポリシーに従う</td>
+          </tr>
+          <tr>
+            <td>Google LLC<br>（<a href="https://support.google.com/policies/troubleshooter/7575787" target="_blank" rel="noopener">プライバシーに関するお問い合わせ</a>）</td>
+            <td>米国</td>
+            <td>アプリインスタンスID、利用イベント、端末・アプリ情報、エラー内容、IPアドレスなどの接続情報</td>
+            <td>利用統計・エラー診断（Firebase Analytics・Crashlytics）、放送局リスト・ロゴの提供（Firebase Hosting）— WORLD RADIO</td>
+            <td>アプリの利用時にネットワークを通じて随時送信</td>
+            <td>Google プライバシーポリシーに従う</td>
+          </tr>
+          <tr>
+            <td>Apple Inc.<br>（<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>）</td>
+            <td>米国</td>
+            <td>検索語、IPアドレスなどの接続情報</td>
+            <td>ポッドキャストのランキング・検索（iTunes Search API、WORLD RADIO）</td>
+            <td>ポッドキャストを探すときにネットワークを通じて送信</td>
+            <td>Apple のプライバシーポリシーに従う</td>
+          </tr>
+          <tr>
+            <td>wsrv.nl<br>（<a href="https://github.com/weserv/images/blob/5.x/Privacy-Policy.md" target="_blank" rel="noopener">プライバシーポリシー</a>）</td>
+            <td>国外（オランダなど）</td>
+            <td>IPアドレスなどの接続情報</td>
+            <td>放送局ロゴ画像の変換（WORLD RADIO）</td>
+            <td>ロゴを読み込むときにネットワークを通じて送信</td>
+            <td>接続記録7日間（wsrv.nl のプライバシーポリシー）</td>
           </tr>
           <tr>
             <td>GitHub, Inc.<br>（<a href="https://support.github.com/contact/privacy" target="_blank" rel="noopener">プライバシーに関するお問い合わせ</a>）</td>

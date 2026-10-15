@@ -56,6 +56,8 @@
           <tr><td>App fonts</td><td>Standard connection information such as IP address</td><td>Sent automatically to Google's servers when fonts are first downloaded</td></tr>
           <tr><td>App weather (Momento)</td><td>Device location coordinates; IP address when the location is not available</td><td>Sent automatically to weather and map services to load the weather and place name when the weather display is on</td></tr>
           <tr><td>In-app purchases (Momento)</td><td>Purchase records (product, time of purchase, purchase verification data)</td><td>Processed through Google Play Billing when you buy Premium (we never receive your payment details)</td></tr>
+          <tr><td>App usage and crashes (WORLD RADIO, Android)</td><td>App instance ID, usage events (selected country and language, names and country codes of stations played or added to favorites), device model and OS version, app version, crash time and details, approximate location</td><td>Collected automatically by Google Firebase Analytics and Crashlytics while you use the App</td></tr>
+          <tr><td>App content requests (WORLD RADIO)</td><td>Standard connection information such as IP address; search terms (when searching podcasts)</td><td>Sent automatically to the relevant servers when loading the station list and logos, or playing or searching stations and podcasts</td></tr>
         </tbody>
       </table>
       </div>
@@ -80,6 +82,17 @@
         <li><strong>Advertising (Google AdMob):</strong> If you use the App for free, it shows Google AdMob ads, handled in the same way as described for Cheer Sign above. Ads are not shown after you buy Premium.</li>
       </ol>
 
+      <h3>WORLD RADIO</h3>
+      <ol>
+        <li><strong>Information stored only on your device:</strong> Your favorite stations and their order, recently played stations, subscribed podcasts, playback position and speed, last selected country and language, and display language are stored only on your device and are never sent to us. They are deleted when you delete the App or clear its data.</li>
+        <li><strong>Station list and logos:</strong> The App's settings, station list and station logos are downloaded from files we host on Google Firebase Hosting. Standard connection information such as your IP address may be sent to Google's servers.</li>
+        <li><strong>Playing stations and podcasts:</strong> The App does not broadcast any audio itself. It connects directly to the servers of the broadcasters and podcast publishers you choose. Your IP address and requests may be logged by those servers, under each broadcaster's or publisher's own policies.</li>
+        <li><strong>Podcast search:</strong> Podcast charts and search use Apple's iTunes Search API, so your search terms and IP address are sent to Apple.</li>
+        <li><strong>Logo image conversion:</strong> Some station logos are loaded through the image service wsrv.nl, which may receive connection information such as your IP address.</li>
+        <li><strong>Usage statistics and crash reports (Android):</strong> We use Google Firebase Analytics and Crashlytics to improve the App and its stability. Only four Analytics events are sent (country selected, language selected, station played, favorite added), and they contain content information such as station names and country codes, never information that directly identifies you.</li>
+        <li><strong>Advertising (Google AdMob):</strong> The App is free and shows Google AdMob ads, handled in the same way as described for Cheer Sign above. Users in the EEA, the UK and Switzerland see Google's consent form (User Messaging Platform) on first launch, and no ads are requested before consent. You can change your choice later in the App's settings.</li>
+      </ol>
+
       <h2>4. How to opt out of personalized ads</h2>
       <p>You can turn off personalized ads or reset or delete your advertising identifier in your device settings.</p>
       <ul>
@@ -98,7 +111,7 @@
       </ul>
 
       <h2>6. Provision to third parties</h2>
-      <p>We process personal information only within the scope in Section 1 and provide it to third parties only with your consent or where the law specifically allows it (Articles 17 and 18 of the Personal Information Protection Act). However, as described in Section 7, Google LLC receives information to provide ads, fonts and in-app purchases in our Apps, and the Norwegian Meteorological Institute (MET Norway), the OpenStreetMap Foundation and ipapi.co (Kloudend, Inc.) receive information to provide the weather display in Momento.</p>
+      <p>We process personal information only within the scope in Section 1 and provide it to third parties only with your consent or where the law specifically allows it (Articles 17 and 18 of the Personal Information Protection Act). However, as described in Section 7, Google LLC receives information to provide ads, fonts and in-app purchases in our Apps, and the Norwegian Meteorological Institute (MET Norway), the OpenStreetMap Foundation and ipapi.co (Kloudend, Inc.) receive information to provide the weather display in Momento, and Google LLC (Firebase), Apple Inc. and wsrv.nl receive information for usage statistics, crash reports and content delivery in WORLD RADIO.</p>
 
       <h2>7. Transfers outside Korea</h2>
       <p>We transfer personal information outside Korea as shown below to provide our services. If you do not want this, you may stop using the relevant service (App or website), or opt out of personalized ads as described in Section 4.</p>
@@ -153,6 +166,30 @@
             <td>Estimating approximate location (Momento, only when the device location is not available)</td>
             <td>Sent over the network when the weather is loaded</td>
             <td>As set out in ipapi.co's privacy policy</td>
+          </tr>
+          <tr>
+            <td>Google LLC<br>(<a href="https://support.google.com/policies/troubleshooter/7575787" target="_blank" rel="noopener">privacy contact</a>)</td>
+            <td>United States</td>
+            <td>App instance ID, usage events, device and app information, crash details, connection information such as IP address</td>
+            <td>Usage statistics and crash reports (Firebase Analytics, Crashlytics), delivering the station list and logos (Firebase Hosting) — WORLD RADIO</td>
+            <td>Sent over the network while you use the App</td>
+            <td>As set out in the Google Privacy Policy</td>
+          </tr>
+          <tr>
+            <td>Apple Inc.<br>(<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">privacy policy</a>)</td>
+            <td>United States</td>
+            <td>Search terms, connection information such as IP address</td>
+            <td>Podcast charts and search (iTunes Search API, WORLD RADIO)</td>
+            <td>Sent over the network when you browse podcasts</td>
+            <td>As set out in Apple's Privacy Policy</td>
+          </tr>
+          <tr>
+            <td>wsrv.nl<br>(<a href="https://github.com/weserv/images/blob/5.x/Privacy-Policy.md" target="_blank" rel="noopener">privacy policy</a>)</td>
+            <td>Outside Korea (Netherlands, etc.)</td>
+            <td>Connection information such as IP address</td>
+            <td>Converting station logo images (WORLD RADIO)</td>
+            <td>Sent over the network when logos are loaded</td>
+            <td>Logs kept for 7 days (wsrv.nl privacy policy)</td>
           </tr>
           <tr>
             <td>GitHub, Inc.<br>(<a href="https://support.github.com/contact/privacy" target="_blank" rel="noopener">privacy contact</a>)</td>

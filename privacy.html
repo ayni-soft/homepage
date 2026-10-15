@@ -55,6 +55,8 @@
           <tr><td>앱 글꼴</td><td>IP 주소 등 일반적인 접속 정보</td><td>글꼴을 처음 내려받을 때 Google 서버로 자동 전달</td></tr>
           <tr><td>앱 날씨 정보 (Momento)</td><td>기기의 위치 좌표, 위치를 얻을 수 없을 때는 IP 주소</td><td>날씨 표시를 켰을 때 날씨와 지역 이름을 불러오기 위해 날씨·지도 서비스로 자동 전송</td></tr>
           <tr><td>앱 내 구매 (Momento)</td><td>구매 내역(상품, 구매 시각, 구매 확인 정보)</td><td>프리미엄 구매 시 Google Play 결제를 통해 처리 (회사는 결제 수단 정보를 받지 않음)</td></tr>
+          <tr><td>앱 이용 통계·오류 (WORLD RADIO, Android)</td><td>앱 인스턴스 ID, 앱 사용 이벤트(선택한 국가·언어, 재생하거나 즐겨찾기한 방송 이름과 국가 코드), 기기 모델·OS 버전, 앱 버전, 오류 발생 시각과 내역, 대략적인 위치</td><td>앱 이용 시 Google Firebase Analytics·Crashlytics가 자동 수집</td></tr>
+          <tr><td>앱 콘텐츠 조회 (WORLD RADIO)</td><td>IP 주소 등 일반적인 접속 정보, 검색어(팟캐스트 검색 시)</td><td>방송 목록·로고를 받거나, 방송·팟캐스트를 재생·검색할 때 해당 서버로 자동 전송</td></tr>
         </tbody>
       </table>
       </div>
@@ -79,6 +81,17 @@
         <li><strong>광고(Google AdMob):</strong> 무료로 이용하는 경우 Google AdMob 광고를 표시하며, 광고 정보의 처리는 위 나만의응원 LED의 광고 항목과 같습니다. 프리미엄을 구매하면 광고를 표시하지 않습니다.</li>
       </ol>
 
+      <h3>WORLD RADIO</h3>
+      <ol>
+        <li><strong>기기에만 저장하는 정보:</strong> 즐겨찾기한 방송과 그 순서, 최근 재생 목록, 구독한 팟캐스트, 이어듣기 위치와 재생 속도, 마지막으로 고른 국가·언어, 앱 표시 언어는 이용자의 기기 안에만 저장되며 회사로 전송되지 않습니다. 앱을 삭제하거나 앱 데이터를 지우면 함께 삭제됩니다.</li>
+        <li><strong>방송 목록과 로고:</strong> 앱의 설정, 방송 목록, 방송국 로고는 회사가 Google Firebase Hosting에 올려 둔 파일에서 받아 옵니다. 이때 IP 주소 등 일반적인 접속 정보가 Google 서버에 전달될 수 있습니다.</li>
+        <li><strong>방송과 팟캐스트 재생:</strong> 앱은 방송을 직접 송출하지 않고, 이용자가 고른 방송사·팟캐스트 발행자의 서버에 바로 접속해 재생합니다. 이 과정에서 각 서버에 IP 주소와 요청 내역이 기록될 수 있으며, 이는 각 방송사·발행자의 방침에 따릅니다.</li>
+        <li><strong>팟캐스트 검색:</strong> 팟캐스트 인기 목록과 검색에는 Apple의 iTunes Search API를 사용하며, 입력한 검색어와 IP 주소 등이 Apple에 전달됩니다.</li>
+        <li><strong>로고 이미지 변환:</strong> 일부 방송국 로고는 이미지 변환 서비스 wsrv.nl을 거쳐 받아 옵니다. 이때 IP 주소 등 접속 정보가 wsrv.nl에 전달될 수 있습니다.</li>
+        <li><strong>이용 통계와 오류 진단(Android):</strong> 서비스 개선과 안정성을 위해 Google Firebase Analytics와 Crashlytics를 사용합니다. Analytics로 보내는 이벤트는 국가 선택, 언어 선택, 방송 재생, 즐겨찾기 추가 네 가지이며, 방송 이름과 국가 코드 같은 콘텐츠 정보만 담고 이용자를 직접 식별하는 정보는 담지 않습니다.</li>
+        <li><strong>광고(Google AdMob):</strong> 무료로 제공되며 Google AdMob 광고를 표시합니다. 광고 정보의 처리는 위 나만의응원 LED의 광고 항목과 같습니다. 유럽경제지역(EEA)·영국·스위스 이용자에게는 처음 실행할 때 Google의 동의 화면(User Messaging Platform)을 보여 주며, 동의 전에는 광고를 요청하지 않습니다. 선택한 내용은 앱의 설정에서 다시 바꿀 수 있습니다.</li>
+      </ol>
+
       <h2>제4조 (맞춤 광고 거부 방법)</h2>
       <p>이용자는 기기 설정에서 맞춤 광고를 끄거나 광고 식별자를 재설정·삭제할 수 있습니다.</p>
       <ul>
@@ -97,7 +110,7 @@
       </ul>
 
       <h2>제6조 (개인정보의 제3자 제공)</h2>
-      <p>회사는 이용자의 개인정보를 제1조에서 명시한 범위 내에서만 처리하며, 이용자의 동의 또는 법률의 특별한 규정 등 「개인정보 보호법」 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다. 다만, 제7조에 적은 바와 같이 앱의 광고·글꼴·인앱 결제 제공을 위해 Google LLC가, Momento 앱의 날씨 표시를 위해 노르웨이 기상청(MET Norway), OpenStreetMap Foundation, ipapi.co(Kloudend, Inc.)가 정보를 받습니다.</p>
+      <p>회사는 이용자의 개인정보를 제1조에서 명시한 범위 내에서만 처리하며, 이용자의 동의 또는 법률의 특별한 규정 등 「개인정보 보호법」 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다. 다만, 제7조에 적은 바와 같이 앱의 광고·글꼴·인앱 결제 제공을 위해 Google LLC가, Momento 앱의 날씨 표시를 위해 노르웨이 기상청(MET Norway), OpenStreetMap Foundation, ipapi.co(Kloudend, Inc.)가, WORLD RADIO 앱의 이용 통계·오류 진단과 콘텐츠 제공을 위해 Google LLC(Firebase), Apple Inc., wsrv.nl이 정보를 받습니다.</p>
 
       <h2>제7조 (개인정보의 국외 이전)</h2>
       <p>회사는 서비스 제공을 위해 아래와 같이 개인정보를 국외로 이전합니다. 이용자는 국외 이전을 원하지 않는 경우 해당 서비스(앱, 웹사이트)의 이용을 중단하거나, 제4조의 방법으로 맞춤 광고를 거부할 수 있습니다.</p>
@@ -152,6 +165,30 @@
             <td>대략적인 위치 확인 (Momento, 기기 위치를 얻을 수 없을 때만)</td>
             <td>날씨를 불러올 때 네트워크를 통해 전송</td>
             <td>ipapi.co 개인정보 방침에 따름</td>
+          </tr>
+          <tr>
+            <td>Google LLC<br>(<a href="https://support.google.com/policies/troubleshooter/7575787" target="_blank" rel="noopener">개인정보 문의</a>)</td>
+            <td>미국</td>
+            <td>앱 인스턴스 ID, 앱 사용 이벤트, 기기·앱 정보, 오류 내역, IP 주소 등 접속 정보</td>
+            <td>이용 통계·오류 진단(Firebase Analytics·Crashlytics), 방송 목록·로고 제공(Firebase Hosting) — WORLD RADIO</td>
+            <td>앱 이용 시 네트워크를 통해 수시로 전송</td>
+            <td>Google 개인정보처리방침에 따름</td>
+          </tr>
+          <tr>
+            <td>Apple Inc.<br>(<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">개인정보 방침</a>)</td>
+            <td>미국</td>
+            <td>검색어, IP 주소 등 접속 정보</td>
+            <td>팟캐스트 인기 목록·검색 (iTunes Search API, WORLD RADIO)</td>
+            <td>팟캐스트를 찾아볼 때 네트워크를 통해 전송</td>
+            <td>Apple 개인정보처리방침에 따름</td>
+          </tr>
+          <tr>
+            <td>wsrv.nl<br>(<a href="https://github.com/weserv/images/blob/5.x/Privacy-Policy.md" target="_blank" rel="noopener">개인정보 방침</a>)</td>
+            <td>해외 (네덜란드 등)</td>
+            <td>IP 주소 등 접속 정보</td>
+            <td>방송국 로고 이미지 변환 (WORLD RADIO)</td>
+            <td>로고를 불러올 때 네트워크를 통해 전송</td>
+            <td>접속 기록 7일 (wsrv.nl 개인정보 방침)</td>
           </tr>
           <tr>
             <td>GitHub, Inc.<br>(<a href="https://support.github.com/contact/privacy" target="_blank" rel="noopener">개인정보 문의</a>)</td>
