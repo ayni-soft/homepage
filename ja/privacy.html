@@ -56,6 +56,7 @@
           <tr><td>アプリのフォント</td><td>IPアドレスなどの一般的な接続情報</td><td>フォントを初めてダウンロードするときに Google のサーバーへ自動で送信</td></tr>
           <tr><td>アプリの天気情報（Momento）</td><td>端末の位置座標、位置を取得できない場合は IPアドレス</td><td>天気表示をオンにしたとき、天気と地域名を取得するため天気・地図サービスへ自動で送信</td></tr>
           <tr><td>アプリ内購入（Momento）</td><td>購入履歴（商品、購入日時、購入確認情報）</td><td>プレミアム購入時に Google Play の決済で処理（当社は支払い方法の情報を受け取りません）</td></tr>
+          <tr><td>アプリの利用統計・エラー（Momento）</td><td>アプリインスタンスID、アプリの起動・利用記録などの自動収集イベント、端末モデル・OSバージョン、アプリのバージョン、エラーの発生日時と内容、おおよその位置情報</td><td>アプリの利用時に Google Firebase Analytics・Crashlytics が自動で収集</td></tr>
           <tr><td>アプリの利用統計・エラー（WORLD RADIO、Android）</td><td>アプリインスタンスID、利用イベント（選んだ国・言語、再生またはお気に入りに追加した放送局の名前と国コード）、端末モデル・OSバージョン、アプリのバージョン、エラーの発生日時と内容、おおよその位置情報</td><td>アプリの利用時に Google Firebase Analytics・Crashlytics が自動で収集</td></tr>
           <tr><td>アプリのコンテンツ取得（WORLD RADIO）</td><td>IPアドレスなどの一般的な接続情報、検索語（ポッドキャスト検索時）</td><td>放送局リスト・ロゴの取得、放送局・ポッドキャストの再生・検索時に該当するサーバーへ自動で送信</td></tr>
         </tbody>
@@ -79,6 +80,7 @@
         <li><strong>PC・NAS の共有フォルダー（SMB）：</strong>共有フォルダーを接続するときに入力したサーバーアドレス、ユーザー名、パスワードは端末内にのみ保存され、利用者が指定したサーバーへの接続にのみ使用します。これらの情報が当社に送信されることはありません。</li>
         <li><strong>位置情報と天気：</strong>天気表示をオンにすると、現在の天気と地域名を表示するため端末の位置情報を使用します。位置情報の権限を許可した場合は、端末の位置座標をノルウェー気象研究所（MET Norway）と OpenStreetMap（Nominatim）に送信します。権限がない場合や位置を取得できない場合は、IPアドレスからおおよその位置を確認するため ipapi.co に接続します。取得した位置は端末内にのみ保存され、当社に送信されることはありません。天気表示をオフにすると位置情報は使用しません。</li>
         <li><strong>アプリ内購入：</strong>プレミアム（広告の非表示、オフライン再生）は Google Play の決済で購入し、決済は Google が処理します。当社は支払い方法の情報を受け取らず、購入の確認に必要な情報のみを Google Play から受け取って端末に保存します。</li>
+        <li><strong>利用統計とエラー診断：</strong>サービスの改善と安定性のため Google Firebase Analytics と Crashlytics を使用します。アプリの起動・利用記録などの自動収集イベントとエラー内容のみを送信し、写真、音楽、共有フォルダーの情報は送信しません。</li>
         <li><strong>広告（Google AdMob）：</strong>無料で利用する場合は Google AdMob の広告を表示し、その取り扱いは上記の応援LEDの広告の項目と同じです。プレミアムを購入すると広告は表示されません。</li>
       </ol>
 
@@ -111,7 +113,7 @@
       </ul>
 
       <h2>第6条（個人情報の第三者提供）</h2>
-      <p>当社は、利用者の個人情報を第1条に定める範囲内でのみ処理し、利用者の同意がある場合または法律に特別の定めがある場合など「個人情報保護法」第17条および第18条に該当する場合にのみ、第三者に提供します。ただし、第7条に記載するとおり、アプリの広告・フォント・アプリ内購入の提供のため Google LLC が、Momento の天気表示のためノルウェー気象研究所（MET Norway）、OpenStreetMap Foundation、ipapi.co（Kloudend, Inc.）が、WORLD RADIO の利用統計・エラー診断とコンテンツ提供のため Google LLC（Firebase）、Apple Inc.、wsrv.nl が情報を受け取ります。</p>
+      <p>当社は、利用者の個人情報を第1条に定める範囲内でのみ処理し、利用者の同意がある場合または法律に特別の定めがある場合など「個人情報保護法」第17条および第18条に該当する場合にのみ、第三者に提供します。ただし、第7条に記載するとおり、アプリの広告・フォント・アプリ内購入の提供のため Google LLC が、Momento の利用統計・エラー診断のため Google LLC（Firebase）が、天気表示のためノルウェー気象研究所（MET Norway）、OpenStreetMap Foundation、ipapi.co（Kloudend, Inc.）が、WORLD RADIO の利用統計・エラー診断とコンテンツ提供のため Google LLC（Firebase）、Apple Inc.、wsrv.nl が情報を受け取ります。</p>
 
       <h2>第7条（個人情報の国外移転）</h2>
       <p>当社は、サービスの提供のため、次のとおり個人情報を国外に移転します。国外移転を望まない場合は、該当するサービス（アプリ、ウェブサイト）の利用を中止するか、第4条の方法でパーソナライズ広告を拒否できます。</p>
@@ -171,7 +173,7 @@
             <td>Google LLC<br>（<a href="https://support.google.com/policies/troubleshooter/7575787" target="_blank" rel="noopener">プライバシーに関するお問い合わせ</a>）</td>
             <td>米国</td>
             <td>アプリインスタンスID、利用イベント、端末・アプリ情報、エラー内容、IPアドレスなどの接続情報</td>
-            <td>利用統計・エラー診断（Firebase Analytics・Crashlytics）、放送局リスト・ロゴの提供（Firebase Hosting）— WORLD RADIO</td>
+            <td>利用統計・エラー診断（Firebase Analytics・Crashlytics）— Momento・WORLD RADIO、放送局リスト・ロゴの提供（Firebase Hosting）— WORLD RADIO</td>
             <td>アプリの利用時にネットワークを通じて随時送信</td>
             <td>Google プライバシーポリシーに従う</td>
           </tr>

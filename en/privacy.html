@@ -56,6 +56,7 @@
           <tr><td>App fonts</td><td>Standard connection information such as IP address</td><td>Sent automatically to Google's servers when fonts are first downloaded</td></tr>
           <tr><td>App weather (Momento)</td><td>Device location coordinates; IP address when the location is not available</td><td>Sent automatically to weather and map services to load the weather and place name when the weather display is on</td></tr>
           <tr><td>In-app purchases (Momento)</td><td>Purchase records (product, time of purchase, purchase verification data)</td><td>Processed through Google Play Billing when you buy Premium (we never receive your payment details)</td></tr>
+          <tr><td>App usage and crashes (Momento)</td><td>App instance ID, automatically collected events such as app opens and usage, device model and OS version, app version, crash time and details, approximate location</td><td>Collected automatically by Google Firebase Analytics and Crashlytics while you use the App</td></tr>
           <tr><td>App usage and crashes (WORLD RADIO, Android)</td><td>App instance ID, usage events (selected country and language, names and country codes of stations played or added to favorites), device model and OS version, app version, crash time and details, approximate location</td><td>Collected automatically by Google Firebase Analytics and Crashlytics while you use the App</td></tr>
           <tr><td>App content requests (WORLD RADIO)</td><td>Standard connection information such as IP address; search terms (when searching podcasts)</td><td>Sent automatically to the relevant servers when loading the station list and logos, or playing or searching stations and podcasts</td></tr>
         </tbody>
@@ -79,6 +80,7 @@
         <li><strong>PC/NAS shared folders (SMB):</strong> The server address, user name and password you enter to connect a shared folder are stored only on your device and are used only to connect to the server you specify. They are never sent to us.</li>
         <li><strong>Location and weather:</strong> When the weather display is on, the App uses your device's location to show the current weather and place name. If you allow location access, the App sends your device's location coordinates to the Norwegian Meteorological Institute (MET Norway) and OpenStreetMap (Nominatim). If location access is not allowed or the location is not available, the App contacts ipapi.co to estimate your approximate location from your IP address. The location is stored only on your device and is never sent to us. When the weather display is off, the App does not use your location.</li>
         <li><strong>In-app purchases:</strong> Premium (no ads, offline playback) is purchased through Google Play Billing, and Google processes the payment. We never receive your payment details; the App receives from Google Play only the information needed to confirm the purchase and stores it on your device.</li>
+        <li><strong>Usage statistics and crash reports:</strong> We use Google Firebase Analytics and Crashlytics to improve the App and its stability. Only automatically collected events such as app opens and usage, and crash details, are sent. Your photos, music and shared folder information are never sent.</li>
         <li><strong>Advertising (Google AdMob):</strong> If you use the App for free, it shows Google AdMob ads, handled in the same way as described for Cheer Sign above. Ads are not shown after you buy Premium.</li>
       </ol>
 
@@ -111,7 +113,7 @@
       </ul>
 
       <h2>6. Provision to third parties</h2>
-      <p>We process personal information only within the scope in Section 1 and provide it to third parties only with your consent or where the law specifically allows it (Articles 17 and 18 of the Personal Information Protection Act). However, as described in Section 7, Google LLC receives information to provide ads, fonts and in-app purchases in our Apps, and the Norwegian Meteorological Institute (MET Norway), the OpenStreetMap Foundation and ipapi.co (Kloudend, Inc.) receive information to provide the weather display in Momento, and Google LLC (Firebase), Apple Inc. and wsrv.nl receive information for usage statistics, crash reports and content delivery in WORLD RADIO.</p>
+      <p>We process personal information only within the scope in Section 1 and provide it to third parties only with your consent or where the law specifically allows it (Articles 17 and 18 of the Personal Information Protection Act). However, as described in Section 7, Google LLC receives information to provide ads, fonts and in-app purchases in our Apps, and the Norwegian Meteorological Institute (MET Norway), the OpenStreetMap Foundation and ipapi.co (Kloudend, Inc.) receive information to provide the weather display in Momento, Google LLC (Firebase) receives information for usage statistics and crash reports in Momento, and Google LLC (Firebase), Apple Inc. and wsrv.nl receive information for usage statistics, crash reports and content delivery in WORLD RADIO.</p>
 
       <h2>7. Transfers outside Korea</h2>
       <p>We transfer personal information outside Korea as shown below to provide our services. If you do not want this, you may stop using the relevant service (App or website), or opt out of personalized ads as described in Section 4.</p>
@@ -171,7 +173,7 @@
             <td>Google LLC<br>(<a href="https://support.google.com/policies/troubleshooter/7575787" target="_blank" rel="noopener">privacy contact</a>)</td>
             <td>United States</td>
             <td>App instance ID, usage events, device and app information, crash details, connection information such as IP address</td>
-            <td>Usage statistics and crash reports (Firebase Analytics, Crashlytics), delivering the station list and logos (Firebase Hosting) — WORLD RADIO</td>
+            <td>Usage statistics and crash reports (Firebase Analytics, Crashlytics) — Momento and WORLD RADIO; delivering the station list and logos (Firebase Hosting) — WORLD RADIO</td>
             <td>Sent over the network while you use the App</td>
             <td>As set out in the Google Privacy Policy</td>
           </tr>
