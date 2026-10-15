@@ -115,6 +115,10 @@ main { flex: 1; }
   margin: 40px 0 8px;
   line-height: 1.4;
 }
+.doc h3 {
+  font-size: 16.5px;
+  margin: 20px 0 6px;
+}
 .doc p, .doc li { font-size: 15.5px; }
 .doc ul, .doc ol { padding-left: 1.3em; }
 .doc table {
